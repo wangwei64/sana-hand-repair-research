@@ -1,0 +1,7 @@
+{
+  "title": "双方法候选批次与人工筛选范围",
+  "source": "sana-hand-batch-repair-20261023/RUNNING.txt",
+  "source_sha256": "226875bfa065ceed2e72a1d0172d5adc207a03fae6dd42dda52faa0296d8c9a6",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": "第二类固定双方法修复批次（2026-10-23）\n\n网页：[local-preview]\n服务器项目：[server-path]\n输出：[server-path]\n状态库：输出目录 jobs.sqlite3（样本、任务、人工选择及事件）\n\n本批从三类标注表读取最新有效类别，尊重已有人工类别修改。\n固定 6425 张第二类原图，12850 个方法任务；以后改类别不自动改动本批。\n复用 20 份 Qwen V2.1 和 19 份 RealisHuman 测试候选，来源记录保留。\n新样本：Qwen 40 步，每目标手部一个固定 seed，复用掌心锚定 SAM 合成；\nRealisHuman 使用既有官方两阶段模型，50+50 步，目标手部 HaMeR 重建。\n未继续开发自动方法选择器；不进行质量评分、自动验收或修复方法迭代。\n手势规划使用现有本地 Qwen3-VL；不调用 API。模型采样和遮罩外像素验证照常执行。\n默认 Qwen 只是展示偏好，人工点击保留后才进入 human_selected_pairs.csv/jsonl。\n检测、分割或重建失败不会删除原图，任务记为失败并保存原因。\n\n后台先处理全部 Qwen 任务（成功或已记录失败），再自动处理剩余 RealisHuman。\n各阶段仍按每批 12 张执行，已完成结果不重跑，网页每 10 秒刷新。\n运行日志：项目 logs/worker.log、logs/qwen.log、logs/realishuman.log。\nworker.pid 记录后台驱动 PID；输出 worker.json 记录心跳、阶段及子进程 PID。\n关闭网页不影响任务；SSH 转发需保持连接才能从本机访问页面。\n恢复：在服务器项目目录执行\n  [server-path] -u worker.py\n可用 nohup 将其置于后台；worker.lock 阻止重复驱动，已完成任务不会重跑。\n停止：向 worker.pid 对应进程发送 SIGTERM，驱动会停止当前子进程。\n原始 20 张测试输出和人工标签保留在 autorepair20 中，与本批标签分离。\n\n2026-10-26 新增：Qwen 成功 5799 张的三选一人工配对页面 review.html，\n以及生成结束后的自动替换检查 postprocess.py。触发时间、恢复命令和输出详见 POSTPROCESS.txt。\n\n2026-10-27 标注加载优化：默认整图和手部均为 320px WebP，标准预览保留 512 / 384；\n提前解码后续 8 张，延迟加载折叠差异图；人工选择即时入库，CSV/JSONL 独立进程合并导出。\n18 项相关单元测试及独立 UI fixture 通过。真实 8 案例预览传输量合计降低 49.1%。\n部署保留原服务器会话；核对既有 1062 条事件逐字一致，1037 条当前选择完整。\n"
+}

@@ -1,0 +1,43 @@
+{
+  "title": "统一评分器：特征、划分及训练协议",
+  "source": "hand-quality-unified-20261105/EXPERIMENT.json",
+  "source_sha256": "2db9294596d3ac8826bbd2be2efbd3f95e047e436f6b98ae8907697db90d2174",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "name": "Unified four-module supervised hand-quality classifier",
+    "created_at_utc": "2026-11-05T07:34:27.300866+00:00",
+    "authorization": "User explicitly requests a single scorer combining all existing modules to judge good/bad.",
+    "inputs": {
+      "items.jsonl": "d4357c686a19de2c7a0972defb6a920e5a9455229c1f6084668ebb0300980712",
+      "preferences.jsonl": "393a9a07deb59440deb4f2a22a540a46e968e006704d4f034fff4f85c77752e4",
+      "features.pt": "81e7afa533cf7a9b594693aa93a67f6700d6edb9e9ed113ec83815d45faf8114",
+      "skeleton_features.npy": "f6aa06c1031f1f73ef3173a32b47c497b343ef164a189e03068e4ecaa16b83da",
+      "candidate_features.pt": "6d79c5595740bb2bff47fcee06a085684cdb0cece6cf9acd524a31804af8420c"
+    },
+    "backbone_sha256": {
+      "dinov2": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+      "diffdoctor": "574db3ea1d2296051ec3edafbb921417c65ca6a933e779075eaf622934539612",
+      "mediapipe": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+      "handcraft": "8fa7a64d136d9b9356a72ed2238fa4744833cb1dc6078fc395e39c2d664372e2"
+    },
+    "features": {
+      "image": 768,
+      "defect": 4,
+      "skeleton": 101,
+      "handcraft": 20,
+      "training_view": "RGB; existing grayscale/JPEG candidate outputs only for fixed stress evaluation",
+      "handcraft_inference": "Official frozen YOLO640 conf.25 iou.7; batch full+square ROIs per image, rectFalse; verify old cached features16probes under2e-5 before reuse."
+    },
+    "labels": "Existing human selected repair=positive; reject-both completed repairs=negative. Unchosen alternative and original only pairwise, never absolute negatives.",
+    "split": "Original dev unchanged. Sort748 original train prompt groups by SHA256(unified-cal-20261105:+group); first floor748/5=149 groups internal calibration, other599 fit. No image/group overlap; original protected tests unread.",
+    "fit": "Three893->64GELU->1 heads, same seed20261105, fixed20epochs RGB only; AdamW lr.001 wd.01 batch128 clip1. BCE explicit labels + softplus pairwise preferred>Bad and preferred>alternate + .001 logit square. Balanced method/label/prompt weights. Frozen modules and no generator updates.",
+    "arms": [
+      "image_only",
+      "without_handcraft",
+      "all_modules"
+    ],
+    "calibration": "Positive-slope Platt with .001 parameter L2; held-out calibration method/label/prompt-balanced BCE only. Select threshold on calibration method- and class-equal balanced accuracy; ties closest50. Never tune using dev or candidate scores.",
+    "delivery": "Deploy all_modules as requested experimental single score with predicted good/bad and calibration threshold; also report both controls and dev error counts even if fusion does not improve. No automatic further tuning or generator training.",
+    "limitations": "Human adoption is not certified anatomy. Learned module failures and source bias can persist. Score is calibrated to balanced human acceptability; no independent anatomy or new Sana candidate human ground truth."
+  }
+}

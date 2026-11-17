@@ -1,0 +1,453 @@
+{
+  "title": "SFT 64 训练 / 8 开发的人工来源检查",
+  "source": "sana-lora-inpaint-sft-20261105/HUMAN_LABEL_AUDIT.json",
+  "source_sha256": "c3241b540cd4b5f84242ab8fb0c4b229c13a4510a074cf3826dd75ea9d90f168",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "passed": true,
+    "count": 72,
+    "all_good_match_human_selected_image_sha256": true,
+    "methods": {
+      "qwen": 72
+    },
+    "scorer_split_counts": {
+      "train": 64,
+      "dev": 8
+    },
+    "records": [
+      {
+        "sample_id": "np-7d8681b579fe2734_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-b0781fa0e1303d49_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-7c3da06b64f2286f_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-c4b19e5293c60d8b_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-0d8f85c709a8fff8_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-80d6d51420d09e96_seed2026102200",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-d02ed506e6d0180d_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-6a592cb34c41f19b_seed2026102204",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-1ddb292919cd7eca_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-62d0598164ee4580_seed2026102204",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-6fe03369039fb4ae_seed2026102209",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-5042908c767d4ab9_seed2026102206",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-e5ce966673ec71e3_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-f27e41f56a52cf62_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-ff978d57df9f9a41_seed2026102209",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-44bcd3d9b87ca731_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-a9898bf041e14e73_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-0f7ae23be6d70bae_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-b6e2410fd388f17e_seed2026102206",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-7aaf4ff07337645e_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-50e0c5ba824652b8_seed2026102204",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-2bc972f50e8d156f_seed2026102209",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-653197a9859682a5_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-f8c07450f6f884af_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-7c5cab29b255f3ca_seed2026102201",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-b55199604991f626_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-02663fb84db6c75f_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-9e281ed2e8929c8a_seed2026102209",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-c78dc2aa061052aa_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-1072d15aa6b04acc_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-f8d80428ae45a2db_seed2026102204",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-ffe38221fea3e54e_seed2026102206",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-a13986831e6934c5_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-4c9021b7aaa029a9_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-6971282ef040eecc_seed2026102208",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-f69d26cdf561359f_seed2026102201",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-3fd4582786d7c28a_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-4cb760a09564c2de_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-53ed307c4196d0c7_seed2026102200",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-f86933ffdf0ac4e6_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-6a5f33fbd5dffb2a_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-8ff896cf2119fb46_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-1654c1330a620886_seed2026102200",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-3229843eb7520239_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-ab33f047513f6ae4_seed2026102206",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-d3794882643a50e7_seed2026102200",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-cbb1ecccfed110ba_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-8b5a0a63a9557fd3_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-85ebd5acb412084f_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-1a3dae5c70fa0252_seed2026102201",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-27a7987fe1d86f98_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-adc05a204036798f_seed2026102201",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-f01f7e62e6b0866c_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-f975212086b52644_seed2026102208",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-dd2eba173e186117_seed2026102208",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-f02bc3201c7d858b_seed2026102206",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-3833c82e5f58f4da_seed2026102208",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-bbf9be7a78ed29c2_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-981dfc480e502acf_seed2026102207",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "np-f9f78c661ec1a93b_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-a374b0b5246b2c53_seed2026102206",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-aac29ba196205f33_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-77096c8d3619d631_seed2026102202",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-ec5cd15169e36ff5_seed2026102204",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "train"
+      },
+      {
+        "sample_id": "hf-971cb9020d6c662f_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      },
+      {
+        "sample_id": "hf-c7481b0077658ae4_seed2026102201",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      },
+      {
+        "sample_id": "hf-ac819c656be86a40_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      },
+      {
+        "sample_id": "hf-02ebc3558a5c3a91_seed2026102200",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      },
+      {
+        "sample_id": "hf-a25fce3046d13985_seed2026102208",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      },
+      {
+        "sample_id": "hf-98d04690e9c424f4_seed2026102203",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      },
+      {
+        "sample_id": "hf-befffe35c436cac0_seed2026102205",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      },
+      {
+        "sample_id": "hf-ea93383e32d47b36_seed2026102201",
+        "method": "qwen",
+        "good_matches_human_choice": true,
+        "scorer_dataset_split": "dev"
+      }
+    ],
+    "limitation": "This fixed generator pilot has72 Qwen human-selected targets; not balanced by repair producer. No inference that one producer is better."
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "title": "HandCraft 冻结检测器评估",
+  "source": "handcraft-detector-eval-20261105/SUMMARY.json",
+  "source_sha256": "d760d83ad83370d16a6a1ceb8765616dca8df720d2321f8c2f233bf353b571af",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "dev_items": 1045,
+    "candidate_images": 104,
+    "modes": {
+      "full": {
+        "states": {
+          "all": {
+            "n": 1045,
+            "normal": 686,
+            "abnormal": 69,
+            "unknown": 290,
+            "all_rois_detected": 741
+          },
+          "accepted": {
+            "n": 312,
+            "normal": 224,
+            "abnormal": 15,
+            "unknown": 73,
+            "all_rois_detected": 235
+          },
+          "rejected": {
+            "n": 132,
+            "normal": 67,
+            "abnormal": 10,
+            "unknown": 55,
+            "all_rois_detected": 74
+          },
+          "unlabelled": {
+            "n": 601,
+            "normal": 395,
+            "abnormal": 44,
+            "unknown": 162,
+            "all_rois_detected": 432
+          },
+          "qwen:0": {
+            "n": 76,
+            "normal": 43,
+            "abnormal": 2,
+            "unknown": 31,
+            "all_rois_detected": 44
+          },
+          "qwen:1": {
+            "n": 286,
+            "normal": 207,
+            "abnormal": 11,
+            "unknown": 68,
+            "all_rois_detected": 215
+          },
+          "realishuman:0": {
+            "n": 56,
+            "normal": 24,
+            "abnormal": 8,
+            "unknown": 24,
+            "all_rois_detected": 30
+          },
+          "realishuman:1": {
+            "n": 26,
+            "normal": 17,
+            "abnormal": 4,
+            "unknown": 5,
+            "all_rois_detected": 20
+          }
+        },
+        "preferences": {
+          "chosen_over_original:all": {
+            "n": 312,
+            "both_scored": 211,
+            "correct": 117,
+            "ties": 0,
+            "strict_agreement": 0.5545023696682464,
+            "agreement_half_ties": 0.5545023696682464,
+            "coverage": 0.6762820512820513
+          },
+          "chosen_over_original:qwen": {
+            "n": 286,
+            "both_scored": 194,
+            "correct": 112,
+            "ties": 0,
+            "strict_agreement": 0.5773195876288659,
+            "agreement_half_ties": 0.5773195876288659,
+            "coverage": 0.6783216783216783
+          },
+          "chosen_over_original:realishuman": {
+            "n": 26,
+            "both_scored": 17,
+            "correct": 5,
+            "ties": 0,
+            "strict_agreement": 0.29411764705882354,
+            "agreement_half_ties": 0.29411764705882354,
+            "coverage": 0.6538461538461539
+          },
+          "chosen_over_alternate:all": {
+            "n": 289,
+            "both_scored": 188,
+            "correct": 117,
+            "ties": 0,
+            "strict_agreement": 0.6223404255319149,
+            "agreement_half_ties": 0.6223404255319149,
+            "coverage": 0.6505190311418685
+          },
+          "chosen_over_alternate:qwen": {
+            "n": 263,
+            "both_scored": 170,
+            "correct": 111,
+            "ties": 0,
+            "strict_agreement": 0.6529411764705882,
+            "agreement_half_ties": 0.6529411764705882,
+            "coverage": 0.6463878326996197
+          },
+          "chosen_over_alternate:realishuman": {
+            "n": 26,
+            "both_scored": 18,
+            "correct": 6,
+            "ties": 0,
+            "strict_agreement": 0.3333333333333333,
+            "agreement_half_ties": 0.3333333333333333,
+            "coverage": 0.6923076923076923
+          }
+        },
+        "preview": {
+          "bad": {
+            "n": 8,
+            "normal": 5,
+            "abnormal": 1,
+            "unknown": 2,
+            "all_rois_detected": 6
+          },
+          "good_offline_reference": {
+            "n": 8,
+            "normal": 6,
+            "abnormal": 1,
+            "unknown": 1,
+            "all_rois_detected": 7
+          },
+          "blur_bad": {
+            "n": 8,
+            "normal": 4,
+            "abnormal": 0,
+            "unknown": 4,
+            "all_rois_detected": 4
+          },
+          "candidates": {
+            "n": 80,
+            "normal": 49,
+            "abnormal": 7,
+            "unknown": 24,
+            "all_rois_detected": 55
+          },
+          "rgb_gray_state_changes": 30,
+          "blur_higher_evidence": 1,
+          "blur_pairs_scored": 3
+        },
+        "adoption_auc": {
+          "accepted_scored": 235,
+          "rejected_scored": 74,
+          "auc": 0.6098907418056354
+        }
+      },
+      "crop": {
+        "states": {
+          "all": {
+            "n": 1045,
+            "normal": 738,
+            "abnormal": 133,
+            "unknown": 174,
+            "all_rois_detected": 863
+          },
+          "accepted": {
+            "n": 312,
+            "normal": 248,
+            "abnormal": 27,
+            "unknown": 37,
+            "all_rois_detected": 275
+          },
+          "rejected": {
+            "n": 132,
+            "normal": 77,
+            "abnormal": 17,
+            "unknown": 38,
+            "all_rois_detected": 93
+          },
+          "unlabelled": {
+            "n": 601,
+            "normal": 413,
+            "abnormal": 89,
+            "unknown": 99,
+            "all_rois_detected": 495
+          },
+          "qwen:0": {
+            "n": 76,
+            "normal": 47,
+            "abnormal": 9,
+            "unknown": 20,
+            "all_rois_detected": 55
+          },
+          "qwen:1": {
+            "n": 286,
+            "normal": 226,
+            "abnormal": 25,
+            "unknown": 35,
+            "all_rois_detected": 251
+          },
+          "realishuman:0": {
+            "n": 56,
+            "normal": 30,
+            "abnormal": 8,
+            "unknown": 18,
+            "all_rois_detected": 38
+          },
+          "realishuman:1": {
+            "n": 26,
+            "normal": 22,
+            "abnormal": 2,
+            "unknown": 2,
+            "all_rois_detected": 24
+          }
+        },
+        "preferences": {
+          "chosen_over_original:all": {
+            "n": 312,
+            "both_scored": 236,
+            "correct": 179,
+            "ties": 1,
+            "strict_agreement": 0.7584745762711864,
+            "agreement_half_ties": 0.760593220338983,
+            "coverage": 0.7564102564102564
+          },
+          "chosen_over_original:qwen": {
+            "n": 286,
+            "both_scored": 216,
+            "correct": 169,
+            "ties": 0,
+            "strict_agreement": 0.7824074074074074,
+            "agreement_half_ties": 0.7824074074074074,
+            "coverage": 0.7552447552447552
+          },
+          "chosen_over_original:realishuman": {
+            "n": 26,
+            "both_scored": 20,
+            "correct": 10,
+            "ties": 1,
+            "strict_agreement": 0.5,
+            "agreement_half_ties": 0.525,
+            "coverage": 0.7692307692307693
+          },
+          "chosen_over_alternate:all": {
+            "n": 289,
+            "both_scored": 229,
+            "correct": 152,
+            "ties": 0,
+            "strict_agreement": 0.6637554585152838,
+            "agreement_half_ties": 0.6637554585152838,
+            "coverage": 0.7923875432525952
+          },
+          "chosen_over_alternate:qwen": {
+            "n": 263,
+            "both_scored": 208,
+            "correct": 142,
+            "ties": 0,
+            "strict_agreement": 0.6826923076923077,
+            "agreement_half_ties": 0.6826923076923077,
+            "coverage": 0.7908745247148289
+          },
+          "chosen_over_alternate:realishuman": {
+            "n": 26,
+            "both_scored": 21,
+            "correct": 10,
+            "ties": 0,
+            "strict_agreement": 0.47619047619047616,
+            "agreement_half_ties": 0.47619047619047616,
+            "coverage": 0.8076923076923077
+          }
+        },
+        "preview": {
+          "bad": {
+            "n": 8,
+            "normal": 4,
+            "abnormal": 2,
+            "unknown": 2,
+            "all_rois_detected": 6
+          },
+          "good_offline_reference": {
+            "n": 8,
+            "normal": 6,
+            "abnormal": 0,
+            "unknown": 2,
+            "all_rois_detected": 6
+          },
+          "blur_bad": {
+            "n": 8,
+            "normal": 4,
+            "abnormal": 0,
+            "unknown": 4,
+            "all_rois_detected": 4
+          },
+          "candidates": {
+            "n": 80,
+            "normal": 35,
+            "abnormal": 27,
+            "unknown": 18,
+            "all_rois_detected": 58
+          },
+          "rgb_gray_state_changes": 37,
+          "blur_higher_evidence": 2,
+          "blur_pairs_scored": 3
+        },
+        "adoption_auc": {
+          "accepted_scored": 275,
+          "rejected_scored": 93,
+          "auc": 0.6156793743890518
+        }
+      }
+    },
+    "no_training": true,
+    "independent_human_review": false,
+    "protected_test_read": false,
+    "label_semantics": "Human adoption/rejection, not anatomical correctness. Preference alternatives are not absolute negatives. Original Bad has no classification label. No clinical/anatomy accuracy claim.",
+    "top_candidates_by_signed_evidence": [
+      {
+        "group": 0,
+        "full": "2026110508",
+        "crop": "2026110508"
+      },
+      {
+        "group": 1,
+        "full": null,
+        "crop": "2026110505"
+      },
+      {
+        "group": 2,
+        "full": "2026110503",
+        "crop": "2026110503"
+      },
+      {
+        "group": 3,
+        "full": "2026110502",
+        "crop": "2026110503"
+      },
+      {
+        "group": 4,
+        "full": "2026110506",
+        "crop": "2026110502"
+      },
+      {
+        "group": 5,
+        "full": "2026110508",
+        "crop": "2026110508"
+      },
+      {
+        "group": 6,
+        "full": "2026110507",
+        "crop": "2026110500"
+      },
+      {
+        "group": 7,
+        "full": "2026110501",
+        "crop": "2026110502"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "手骨架诊断结果",
+  "source": "hand-skeleton-eval-20261105/STATE.json",
+  "source_sha256": "627e1aa8b6bf731eaf7d80928e028daae8d802a3f8420b542914e89954848e49",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "status": "completed_skeleton_diagnostic",
+    "record_count": 229,
+    "human_cases": 48,
+    "findings": {
+      "accepted_images_any_detection": "32/32",
+      "rejected_images_any_detection": "23/29",
+      "human_preference_lower_mirror_error": "18/28 available pairs;4unavailable; not hand success rate",
+      "blur_lower_mirror_error": 4,
+      "blur_comparable_count": 5
+    },
+    "decision": "Keep geometry, availability, mirror stability, original-pose change as separate diagnostics. Do not interpret fixed21keypoint topology or handedness confidence as anatomy quality. No trained composite update this run.",
+    "trained_parameters": 0,
+    "generator_updates": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "report_date": "2026-11-17",
+  "checks": [
+    "All 565 preview sizes and SHA256 hashes",
+    "31 public evidence hashes and source references",
+    "Static local links and anchor IDs",
+    "All gallery image references and matched seeds",
+    "Independent aggregation of per-group and full development scores",
+    "444-label confusion matrix and balanced accuracy",
+    "Machine-path and credential-pattern scan"
+  ],
+  "routes": 21,
+  "gallery_groups": {
+    "dev8": 8,
+    "train8": 8
+  },
+  "record_counts": {
+    "dev8:base": 80,
+    "dev8:step00128": 16,
+    "dev8:step00256": 16,
+    "dev8:step00512": 80,
+    "dev8:bad_reference": 8,
+    "dev8:good_reference": 8,
+    "train8:base": 16,
+    "train8:step00512": 16,
+    "train8:bad_reference": 8,
+    "train8:good_reference": 8
+  },
+  "evaluation_records_excluding_references": 224,
+  "development_score_mean_base": 24.15438179338111,
+  "development_score_mean_lora": 29.510748630675483,
+  "development_same_seed_score_increases": 54,
+  "note": "Website publication checks only; not a new model evaluation or anatomical success measure."
+}

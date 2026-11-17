@@ -1,0 +1,45 @@
+{
+  "title": "SFT 交付检查、分数和耗时",
+  "source": "sana-lora-inpaint-sft-20261105/DELIVERY_CHECK.json",
+  "source_sha256": "9dfc44986dc775ad36a5a12c69ac9b3272be164a3c6c2501510091dea7869878",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "passed": true,
+    "actual_separate_process_cli_png_exact": true,
+    "cli_sha256": "f5c71db264eede4a2ab2c940bb1a7025090c12f304bdcb0f6790ebf5a32ee1bb",
+    "fresh_generated_png_count": 144,
+    "reused_verified_baseline_png_count": 80,
+    "all224_final_png_outside_mask_exact": true,
+    "warm_generation_seconds_median_excluding_first_generated": 4.2663007830269635,
+    "timing_includes_bad_encode_mask_text_read_sampling_decode_full_image_composite": true,
+    "no_cropping_in_generator": true,
+    "model_loading_seconds": 1.3042326159775257,
+    "scorer_loading_seconds": 10.100057169911452,
+    "scorer_hot_seconds_median_excluding_first": 0.3120536629576236,
+    "summary": [
+      {
+        "split": "dev8",
+        "candidate_count": 80,
+        "base_mean_score": 24.15438179338111,
+        "lora_mean_score": 29.510748630675486,
+        "mean_score_delta": 5.356366837294376,
+        "median_score_delta": 5.6452437902559796,
+        "score_increased_count": 54,
+        "base_top1_mean_score": 42.61953914217638,
+        "lora_top1_mean_score": 49.06004446225145
+      },
+      {
+        "split": "train8",
+        "candidate_count": 16,
+        "base_mean_score": 18.94194889102265,
+        "lora_mean_score": 32.32997543389904,
+        "mean_score_delta": 13.388026542876386,
+        "median_score_delta": 13.60345519690387,
+        "score_increased_count": 16,
+        "base_top1_mean_score": 21.608388237236277,
+        "lora_top1_mean_score": 36.34660066000748
+      }
+    ],
+    "human_success_rate": null
+  }
+}

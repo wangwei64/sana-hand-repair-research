@@ -1,0 +1,43 @@
+{
+  "title": "人工采用配对数据快照",
+  "source": "deliverables/hand-pairs-reviewed-20261028/statistics.json",
+  "source_sha256": "9ad17d7c5be2f297410c00d0df8758f0c050d3d5ea079ab38b4fb6106e8a3f7e",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "schema_version": "human-selected-pairs-v1",
+    "source": "[server-path]",
+    "dataset": "[server-path]",
+    "review_snapshot_sha256": "a13cc42ce79bab6db46d0868a7ddb2429d8bd9b9129511a76cc3c4245e02d64d",
+    "review_event_count": 6092,
+    "last_review_event": 6092,
+    "created_at": "2026-10-28T06:33:55.591928+00:00",
+    "accepted_pairs": 4454,
+    "pending": 0,
+    "methods": {
+      "qwen": 3947,
+      "realishuman": 507
+    },
+    "prompt_groups": {
+      "Hand-focused": 3511,
+      "Natural Portrait": 943
+    },
+    "unique_prompts": 943,
+    "hand_records": 7995,
+    "target_hands": 6085,
+    "dimensions": {
+      "1024x1024": 4454
+    },
+    "outside_mask_changed_pixels_total": 0,
+    "unchanged_pairs": 0,
+    "failed": 0,
+    "automatic_quality_filter_applied": false,
+    "all_source_and_selected_candidate_hashes_verified": true,
+    "all_copies_verified": true,
+    "storage": "independent full-resolution file copies, no symlinks or hardlinks",
+    "annotation_source_unchanged_during_export": true,
+    "payload_files": 68366,
+    "payload_bytes": 16959224606,
+    "only_human_accepted_cases_packaged": true,
+    "final_live_selection_match": true
+  }
+}

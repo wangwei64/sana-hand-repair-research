@@ -1,0 +1,67 @@
+{
+  "title": "人工选择与 DiffDoctor 融合对照",
+  "source": "hand-reward-composite-20261105/MODEL_CARD.json",
+  "source_sha256": "6450134020755c8ccc2567b2a6bcade8530e959868a1713060f8260fe86d7012",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "name": "Human composite hand scorer v2",
+    "status": "training_and_candidate_scoring_completed_not_validated_as_generator_reward",
+    "training_sources": "Frozen human choice DB, both Qwen and RealisHuman equally authoritative",
+    "human_source_counts": {
+      "reject:qwen": 1345,
+      "keep:qwen": 3947,
+      "keep:realishuman": 507
+    },
+    "actual_training_cases": {
+      "dev:reject": 76,
+      "dev:keep": 312,
+      "train:keep": 3573,
+      "train:reject": 1011
+    },
+    "preference_relation": "Selected repair > original and selected repair > existing alternate; unchosen alternate has unknown absolute label; neither-completed repairs explicitly rejected.",
+    "backbones": "Frozen DINOv2-small and frozen DiffDoctor Segformer-mit-b5",
+    "head_parameters": 49537,
+    "controlled_comparison": "772->64GELU->1 same seed; composite gets4DDstats; control receiveszero in thosechannels; same labels/data20epochs.",
+    "inference_inputs": [
+      "candidate RGB image",
+      "preexisting original fixed mask",
+      "original context hand boxes"
+    ],
+    "reference_good_used_at_inference": false,
+    "original_bad_or_prompt_used_in_current_head": false,
+    "human_accepted_labels_override_assistant_visual_preferences": true,
+    "use_scope": "Experimental candidate ranking and possible reward input. Not yet validated for generator optimization.",
+    "not_claimed": [
+      "Independent pose/contact preservation",
+      "Per-finger anatomical correctness probability",
+      "Independent human success rate on generated Sana candidates",
+      "Full RealGen or DIAMOND reproduction"
+    ],
+    "reproducibility": {
+      "remote_root": "[server-path]",
+      "python": "[server-path]",
+      "sources": "SOURCE_SHA256SUMS and EVALUATION_SHA256SUMS",
+      "head": "composite.pt",
+      "inference_entry": "score.py",
+      "fresh_run_entry": "reproduce.sh in fresh copy on recorded environment, requires existing dataset and backbones"
+    },
+    "results": {
+      "human_only_choice_accuracy": 0.8442906574394463,
+      "composite_choice_accuracy": 0.8339100346020761,
+      "diffdoctor_only_choice_accuracy": 0.370242214532872,
+      "composite_RH_chosen_accuracy": 0.38461538461538464,
+      "human_only_RH_chosen_accuracy": 0.46153846153846156,
+      "dev_classification_auc": {
+        "human_only": 0.7614850427350427,
+        "composite": 0.7606351981351981,
+        "diffdoctor_negative_mse": 0.3487762237762238
+      },
+      "same_mask_composite_top1_across_arms": "8of8same",
+      "blurred_bad_score_increased": "3of8forbothmodels",
+      "anatomy_success_rate": null
+    },
+    "decision": "No demonstrated benefit of adding four DiffDoctor statistics to this frozen-encoder head. Preserve both checkpoints; no generator optimization and no automatic expansion.",
+    "visual_review": "VISUAL_NOTES.json",
+    "protected_test": "unread"
+  }
+}

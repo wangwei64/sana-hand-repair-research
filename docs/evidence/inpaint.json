@@ -1,0 +1,78 @@
+{
+  "title": "官方 inpainting：8 组 × 10 噪声",
+  "source": "sana-official-inpaint8x10-20261105/SUMMARY.json",
+  "source_sha256": "7530cb7df0882a94c4edbff1d312f5379534da65584b904cb502cb66508373ec",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "count": 80,
+    "groups": 8,
+    "seeds": [
+      2026110500,
+      2026110501,
+      2026110502,
+      2026110503,
+      2026110504,
+      2026110505,
+      2026110506,
+      2026110507,
+      2026110508,
+      2026110509
+    ],
+    "inference_completed": true,
+    "training_used": false,
+    "lora_used": false,
+    "method": "Pinned original official masked DPM solver with existing frozen Sana-0.6B Diffusers forward bridge",
+    "visual_conclusion": "换噪声确实能重绘出不同手形，部分拳头和竖指候选比 Bad 更清楚，但结果依赖噪声，握持、保姿态和连接仍不稳定。原始解码通常比硬回贴连贯；回贴虽保持 Mask 外逐像素不变，却可能制造接缝、截断新手形。不能把两种问题混为一谈，也不能把有变化直接算成功。",
+    "quality_success_rate": null,
+    "timing": {
+      "sample_seconds": {
+        "min": 1.8386991759762168,
+        "median": 1.8806408410018776,
+        "max": 2.041001350968145
+      },
+      "hot_compute_seconds_without_shared_encode": {
+        "min": 2.0153184619848616,
+        "median": 2.05850673749228,
+        "max": 2.2350437300046906
+      },
+      "shared_bad_encode_seconds": {
+        "min": 0.09220493299653754,
+        "median": 0.09235421248013154,
+        "max": 1.8603697079815902
+      },
+      "model_load_seconds": {
+        "min": 0.9747715290286578,
+        "median": 0.9747715290286578,
+        "max": 0.9747715290286578
+      },
+      "peak_allocated_MiB": {
+        "min": 3448.33203125,
+        "median": 3457.01953125,
+        "max": 3457.01953125
+      }
+    },
+    "timing_caveat": "Hot compute includes inverse+generation+decode+pixel composite; excludes shared Bad encode, model/text loading, image read and PNG saving. Cached text was reused. No crop-specific speed claim.",
+    "weights": {
+      "[server-path]": "15a4b09e56d95b768a0ec9da50b702e21d920333fc9b3480d66bb5c7fad9d87f"
+    },
+    "checks": {
+      "official_definitions_ast_identical": true,
+      "zero_mask_restores_clean_latent_exact": true,
+      "constant_flow_full_mask_matches_unmasked_with_atol_1e_6": true,
+      "constant_flow_max_difference": 5.960464477539063e-08,
+      "real_model_cfg_time_conversion": true,
+      "max_cfg_conversion_difference": 4.76837158203125e-07
+    },
+    "hardware": "NVIDIA A800-SXM4-80GB, 580.126.09",
+    "delivery": {
+      "raw_png": 80,
+      "composite_png": 80,
+      "file_and_pixel_checks": "all passed",
+      "gallery": "index.html"
+    },
+    "raw_outside_mae255": {
+      "median": 1.9185042101599779,
+      "note": "Diagnostic pixel difference; includes decode/reconstruction and local editing effects, not an anatomy score."
+    }
+  }
+}

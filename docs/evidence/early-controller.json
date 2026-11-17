@@ -1,0 +1,104 @@
+{
+  "title": "早期纠错外挂的试跑门槛",
+  "source": "deliverables/sana-cfg-corrector-20261028/scaleup_decision.json",
+  "source_sha256": "658675c88baa2b120d0a43a325e7209a84a9e9c51d35fdcaff7d2bfea6716bb8",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "engineering_path_verified": true,
+    "pilot_quality_gate_passed": false,
+    "engineering_evidence": [
+      "96 original Bad pixel-exact replays",
+      "Both pilot models: all 16 zero-intervention rollouts exact",
+      "Four-pair memorization: 99.6% residual loss reduction",
+      "Standalone inference pixels equal evaluation; Good not inference input",
+      "Train/validation/test prompt groups disjoint"
+    ],
+    "pilot_results": {
+      "pilot": {
+        "name": "pilot",
+        "split": "validation",
+        "cases": 16,
+        "conditions": {
+          "zero": {
+            "mean_hand_lpips": 0.16562419943511486,
+            "median_relative_hand_improvement": 0.0,
+            "mean_relative_hand_improvement": 0.0,
+            "improved_cases": 0,
+            "mean_outside_mae255": 0.0,
+            "max_outside_mae255": 0.0
+          },
+          "pred_a025": {
+            "mean_hand_lpips": 0.16583809908479452,
+            "median_relative_hand_improvement": 0.0016629459335393282,
+            "mean_relative_hand_improvement": -0.0017663156961119572,
+            "improved_cases": 9,
+            "mean_outside_mae255": 0.4089466527015474,
+            "max_outside_mae255": 0.6050372156082031
+          },
+          "pred_a050": {
+            "mean_hand_lpips": 0.16726711858063936,
+            "median_relative_hand_improvement": -0.010882460945554229,
+            "mean_relative_hand_improvement": -0.012981383713684708,
+            "improved_cases": 4,
+            "mean_outside_mae255": 0.5554613726282087,
+            "max_outside_mae255": 0.8274625354521405
+          },
+          "pred_a100": {
+            "mean_hand_lpips": 0.17668693768791854,
+            "median_relative_hand_improvement": -0.05924828784886793,
+            "mean_relative_hand_improvement": -0.08023207753934679,
+            "improved_cases": 0,
+            "mean_outside_mae255": 0.8312529193573545,
+            "max_outside_mae255": 1.226552495628759
+          }
+        },
+        "selected": "pred_a025",
+        "selected_strength": 0.25,
+        "numerical_pilot_gate": false,
+        "gate_definition": "At least 1% mean relative crop LPIPS improvement, at least 55% cases improved; outside MAE mean <=2 and max <=5 on 0..255 scale. This is a small pilot engineering gate, not anatomical certification.",
+        "zero_exact_cases": 16,
+        "no_reference_at_inference": true,
+        "checkpoint_sha256": "b55ceb78b8196d292562f2d9509b0907b82b0213d6451874954c7164bd04f792"
+      },
+      "pilot_small": {
+        "name": "pilot_small",
+        "split": "validation",
+        "cases": 16,
+        "conditions": {
+          "zero": {
+            "mean_hand_lpips": 0.16562419943511486,
+            "median_relative_hand_improvement": 0.0,
+            "mean_relative_hand_improvement": 0.0,
+            "improved_cases": 0,
+            "mean_outside_mae255": 0.0,
+            "max_outside_mae255": 0.0
+          },
+          "pred_a050": {
+            "mean_hand_lpips": 0.16599917178973556,
+            "median_relative_hand_improvement": -0.0013536976663528488,
+            "mean_relative_hand_improvement": -0.0021252089847128494,
+            "improved_cases": 7,
+            "mean_outside_mae255": 0.434415731220696,
+            "max_outside_mae255": 0.6082306065562698
+          },
+          "pred_a100": {
+            "mean_hand_lpips": 0.16732317791320384,
+            "median_relative_hand_improvement": -0.008221860566337225,
+            "mean_relative_hand_improvement": -0.010617645814296611,
+            "improved_cases": 3,
+            "mean_outside_mae255": 0.607979231620011,
+            "max_outside_mae255": 0.8267790829411228
+          }
+        },
+        "selected": "pred_a050",
+        "selected_strength": 0.5,
+        "numerical_pilot_gate": false,
+        "gate_definition": "At least 1% mean relative crop LPIPS improvement, at least 55% cases improved; outside MAE mean <=2 and max <=5 on 0..255 scale. This is a small pilot engineering gate, not anatomical certification.",
+        "zero_exact_cases": 16,
+        "no_reference_at_inference": true,
+        "checkpoint_sha256": "3923edd425375e81689b2ed5661106b7dc2960154e884977fbdf8a5b7ce328ee"
+      }
+    },
+    "decision": "Small-data efficacy did not pass. Keep that failure explicit; use the authorized full-data stage to test whether broader supervision improves generalization. Do not deploy or call results anatomically correct."
+  }
+}

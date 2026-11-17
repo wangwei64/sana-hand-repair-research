@@ -1,0 +1,30 @@
+{
+  "title": "20 对回退时刻实验结论",
+  "source": "sana-hand-rollback-timing-20261029/conclusion.json",
+  "source_sha256": "ab56aec16a46187eb0d623a60d10e9a5a602f910afe1f237871db506e52afcbd",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "no_training": true,
+    "recommended_start": 10,
+    "recommended_guidance_window": [
+      10,
+      18
+    ],
+    "short_guidance_candidate": [
+      15,
+      16
+    ],
+    "short_guidance_not_robustly_validated": true,
+    "interpretation": "Exploratory 20-pair known-reference experiment; recommendation conditional on this mask, strength and solver. No claim of universal optimum or anatomical pass rate.",
+    "paragraphs": [
+      "本次完成20对、17种条件、340个干预结果及400张原轨迹干净预测图，没有训练。起点均指20步时间表中该步执行之前；两步方案指连续两次引导，并非相隔两阶段引导。",
+      "实用默认建议回到第10步（σ≈0.785），在手部token内持续引导第10–18步。持续组从5/8/10开始的平均手部LPIPS分别为0.07602、0.07604、0.07636；第10与第5起点的配对差值95% bootstrap区间为[-0.00165, 0.00233]。这一小样本没有显示更早起点的明确平均优势；区间跨零并不等价于证明两者完全相等。第10步更省回退后的采样计算，手部位置也更稳定。",
+      "两步引导确实可以起作用，但不够稳定。第10–11步平均LPIPS为0.13989，第15–16步为0.10159，后者在本次两步组中均值最低；仍弱于10–18持续组的0.07636。若严格限制为两次连续更新，15–16可作为数值基线，不能据此认定结构修复已合格。两步强度0.4375、其他组0.25，只匹配静态累计混合系数，不是实际作用量相等。",
+      "视觉检查说明不存在已证实的统一“主体形成但手指错误尚未形成”的窗口：第1组到第5步人物可辨时已见缺指，第8/9组到第8步已见多指；更早模糊并不证明结构原本正确。两步能够消除部分多指，第1组缺指却可能保留或只长出残影，第4组还会改变手势，第6组的折叠指连接不易稳定改善。不能把LPIPS降低直接称为结构成功率。",
+      "20组的原始时间轴均已直接检查，共27个目标手部；终点的详细观察单独记录了所看条件，未宣称逐张人工验证340张都合格。固定最终坐标Mask在早期可能没覆盖移动中的手：MediaPipe第8步检出10/20组，第10步检出17/20组；检出子集的匹配中心距离中位数约14.39px和7.38px。检测数及距离只是位置诊断。",
+      "所有已保存干预轨迹的遮罩外latent token逐位保持原轨迹。DC-AE解码仍会传播到RGB遮罩外：10–18组遮罩外像素平均绝对差为0.501/255，故没有保证RGB遮罩外完全不变。",
+      "保持全部20对，并单独报告预先排除第14/20组姿态变化后的18对，整体趋势一致。本次还观察到第10组Good从张开手改为OK手势；部分其他参考也改变握持关系。这些观察仅保存在实验附加记录，原人工标注和配对数据未修改。",
+      "这是使用已知Good及原Bad最终latent构造参考方向的离线实验，不是真实Good生成轨迹，也不是可直接部署的在线纠错器。建议后续数据设计先保留第10–18步的状态、预测干净结果、手部Mask和逐步目标，不急于只留下两帧；当前仍暂停训练。"
+    ]
+  }
+}

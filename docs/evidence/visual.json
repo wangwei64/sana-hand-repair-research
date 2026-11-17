@@ -1,0 +1,787 @@
+{
+  "title": "SFT 逐图助手视觉记录",
+  "source": "sana-lora-inpaint-sft-20261105/VISUAL_NOTES.json",
+  "source_sha256": "e26b5476dbb433ca7b1014d3a618ad7bc1e53c71d3af1b61ebe4b5d6d4028967",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "reviewer": "assistant visual screening; not independent human review",
+    "checkpoint": 512,
+    "groups": [
+      {
+        "split": "dev8",
+        "group": 0,
+        "note": "握拳多数候选变大、变浅，部分指块更肥厚，拇指和掌腕关系仍异常；没有稳定结构优势，平均分反而下降。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "拳头更大但指块/掌腕关系不够自然"
+          },
+          {
+            "seed": 2026110501,
+            "note": "拇指与四指关系仍不清楚"
+          },
+          {
+            "seed": 2026110502,
+            "note": "拳头膨大，折指连接仍不自然"
+          },
+          {
+            "seed": 2026110503,
+            "note": "椭圆鼓包与重复指块明显"
+          },
+          {
+            "seed": 2026110504,
+            "note": "方向改变，未见明确结构优势"
+          },
+          {
+            "seed": 2026110505,
+            "note": "比基线多出可见指节，但拳形仍不自然"
+          },
+          {
+            "seed": 2026110506,
+            "note": "较基线明显膨大，拇指/掌缘不清楚"
+          },
+          {
+            "seed": 2026110507,
+            "note": "与基线相近但指块变粗"
+          },
+          {
+            "seed": 2026110508,
+            "note": "过大指块，掌缘形态仍异常"
+          },
+          {
+            "seed": 2026110509,
+            "note": "指块膨大，拇指位置仍异常"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "dev8",
+        "group": 1,
+        "note": "部分种子补回了基线消失的右手或截短的拇指，但多张仍有指段重复、头发处硬截断、腕部连接和塑料感；不能当作双手均修好。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "左拇指恢复更完整；右指根/头发处截断仍在"
+          },
+          {
+            "seed": 2026110501,
+            "note": "左拇指较完整；右手位置/腕部关系仍不自然"
+          },
+          {
+            "seed": 2026110502,
+            "note": "右手更清晰但块状指段与指根异常仍在"
+          },
+          {
+            "seed": 2026110503,
+            "note": "补回基线消失的右手；局部收益，但整体连接仍待改进"
+          },
+          {
+            "seed": 2026110504,
+            "note": "右拇指较完整，左手拉伸/腕部硬边仍在"
+          },
+          {
+            "seed": 2026110505,
+            "note": "右拇指在头发边缘仍被截断，手变大"
+          },
+          {
+            "seed": 2026110506,
+            "note": "右手头发处硬截断仍在"
+          },
+          {
+            "seed": 2026110507,
+            "note": "补回基线几乎消失的右手，但轮廓仍过于块状"
+          },
+          {
+            "seed": 2026110508,
+            "note": "右拇指仍有细颈和头发硬边，近似基线"
+          },
+          {
+            "seed": 2026110509,
+            "note": "右手较基线破碎结果更完整，但拇指/边界仍异常"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "dev8",
+        "group": 2,
+        "note": "有局部收益：部分种子更清楚、折指更完整、残影减少；同时仍出现指尖截断或重影。不能作为稳定的结构修复。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "近似基线，折指小幅变化"
+          },
+          {
+            "seed": 2026110501,
+            "note": "上方残影减轻，指尖轮廓仍有折断感"
+          },
+          {
+            "seed": 2026110502,
+            "note": "较模糊基线更清楚，折指更完整；局部改善"
+          },
+          {
+            "seed": 2026110503,
+            "note": "指尖出现明显断开/白色残片，失败"
+          },
+          {
+            "seed": 2026110504,
+            "note": "指尖仍有重影与异常弯折"
+          },
+          {
+            "seed": 2026110505,
+            "note": "与基线接近，折指关系变化不明显"
+          },
+          {
+            "seed": 2026110506,
+            "note": "减少不合预期的张开拇指，折指更完整；局部改善"
+          },
+          {
+            "seed": 2026110507,
+            "note": "折指较基线完整，但掌指衔接仍需审查"
+          },
+          {
+            "seed": 2026110508,
+            "note": "折指形状变化，尚不足认定清晰结构优势"
+          },
+          {
+            "seed": 2026110509,
+            "note": "较基线更接近闭合折指，但仍不够自然"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "dev8",
+        "group": 3,
+        "note": "抱树姿态经常改成托举；多张有接触、指根和亮度错误，s09甚至在手区生成第二张人脸。s06局部手指更清楚，但无稳定整体修复。评分最高的s09是严重误排。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "双手从底部托举，指排较清晰但长指/指根与接触仍不自然"
+          },
+          {
+            "seed": 2026110501,
+            "note": "手更细长，腕部阴影和连接异常"
+          },
+          {
+            "seed": 2026110502,
+            "note": "左手指缝更清楚，右手仍有分离指块/橙色块"
+          },
+          {
+            "seed": 2026110503,
+            "note": "手指拉长，并出现新白色袖边，连接错误"
+          },
+          {
+            "seed": 2026110504,
+            "note": "指甲与细长指段更清楚，但托举和肤色不协调"
+          },
+          {
+            "seed": 2026110505,
+            "note": "左手指段较完整，双手相交处仍不自然"
+          },
+          {
+            "seed": 2026110506,
+            "note": "比基线折叠指块更清楚，局部收益；仍有握持与光照歧义"
+          },
+          {
+            "seed": 2026110507,
+            "note": "新增手臂/躯干形状，袖口硬切，严重失败"
+          },
+          {
+            "seed": 2026110508,
+            "note": "手指增多般的重叠与亮度不自然，未可靠修复"
+          },
+          {
+            "seed": 2026110509,
+            "note": "手区生成完整人脸和另一身体片段，严重失败；却为本组LoRA最高分42.3"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "dev8",
+        "group": 4,
+        "note": "多数种子V字手势更清楚，部分指缝与折指关系比基线完整；肤色明显变亮，仍有异常掌纹/折指连接。原提示词是peace sign，而Good单指，不能把姿态偏离Good直接算结构失败。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "极细第二指变得完整，V手势更清楚；掌指连接仍有疑问"
+          },
+          {
+            "seed": 2026110501,
+            "note": "单指转为V手势，更符合原prompt，折指较清楚"
+          },
+          {
+            "seed": 2026110502,
+            "note": "基线块状折指改善，双指和指缝更明确"
+          },
+          {
+            "seed": 2026110503,
+            "note": "折指更清楚，掌纹交叉/指根仍不自然"
+          },
+          {
+            "seed": 2026110504,
+            "note": "单指转V手势，局部结构更完整但手掌硬折"
+          },
+          {
+            "seed": 2026110505,
+            "note": "V手势清晰，折指根部仍块状"
+          },
+          {
+            "seed": 2026110506,
+            "note": "手变大变亮，无稳定优于基线的依据"
+          },
+          {
+            "seed": 2026110507,
+            "note": "折指轮廓比基线清楚，局部改善"
+          },
+          {
+            "seed": 2026110508,
+            "note": "手更清楚，仍有明显长直掌纹与指根问题"
+          },
+          {
+            "seed": 2026110509,
+            "note": "比模糊基线更清楚，但掌心/折指块不够自然"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "dev8",
+        "group": 5,
+        "note": "多数种子折指比基线更完整，但细长食指、指尖断裂、亮肤色与袖口/手臂改变仍普遍，未稳定接近Good。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "折指更清楚，但食指细得不自然，指尖/关节有硬缺口"
+          },
+          {
+            "seed": 2026110501,
+            "note": "基线指根结节有所改善，细食指和指节断裂仍在"
+          },
+          {
+            "seed": 2026110502,
+            "note": "折指更整齐，指尖明显截断仍在"
+          },
+          {
+            "seed": 2026110503,
+            "note": "掌心翻转变清晰，食指尖截断和折指连接仍异常"
+          },
+          {
+            "seed": 2026110504,
+            "note": "食指弯折稍改善，手掌指根仍不自然"
+          },
+          {
+            "seed": 2026110505,
+            "note": "折指更大更明确，拇指连接不清楚"
+          },
+          {
+            "seed": 2026110506,
+            "note": "细长食指与腕部改变仍在，没稳定优势"
+          },
+          {
+            "seed": 2026110507,
+            "note": "折指形状改变，拇指/手指相交异常"
+          },
+          {
+            "seed": 2026110508,
+            "note": "比基线掌心更完整，但细指根与多重折指仍有疑问"
+          },
+          {
+            "seed": 2026110509,
+            "note": "上举食指较完整，但掌心折指鼓包/连接不自然"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "dev8",
+        "group": 6,
+        "note": "有些折指轮廓更清楚，整体仍常有过大手掌、截断指尖、异常拇指和硬拼接；分数可高于Good而存在明显错误。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "食指顶端被截断，折指更清楚也不能算修好"
+          },
+          {
+            "seed": 2026110501,
+            "note": "指尖上方黑白断片，手掌和拇指过大"
+          },
+          {
+            "seed": 2026110502,
+            "note": "折指较清楚，手掌拉长且拇指根生硬"
+          },
+          {
+            "seed": 2026110503,
+            "note": "折指更明确但拇指横向鼓包明显"
+          },
+          {
+            "seed": 2026110504,
+            "note": "折指更连贯、相对局部改善；肤色/大小改变"
+          },
+          {
+            "seed": 2026110505,
+            "note": "指尖仍断裂，折指与基线相近"
+          },
+          {
+            "seed": 2026110506,
+            "note": "手掌更大但掌纹异常长，指尖平截"
+          },
+          {
+            "seed": 2026110507,
+            "note": "折指更清楚，拇指鼓包与掌面关系仍异常"
+          },
+          {
+            "seed": 2026110508,
+            "note": "食指旁出现明显肤色残片/重影，严重退化"
+          },
+          {
+            "seed": 2026110509,
+            "note": "比模糊基线清楚，拇指仍过大，肤色偏亮"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "dev8",
+        "group": 7,
+        "note": "拳头更清楚但往往膨大，掌缘/拇指连接与袖口硬边普遍；透明浅色背景补丁在基线和LoRA均有，不可用Mask外恒等掩盖Mask内接缝。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "折指清楚但掌底弧线过大，袖口硬切"
+          },
+          {
+            "seed": 2026110501,
+            "note": "拳头显著膨大，掌底与袖口断层"
+          },
+          {
+            "seed": 2026110502,
+            "note": "比基线偏侧拳更正，但膨大掌底与拇指异常"
+          },
+          {
+            "seed": 2026110503,
+            "note": "模糊基线变清楚，掌底和袖口仍硬切"
+          },
+          {
+            "seed": 2026110504,
+            "note": "纹理更清楚，但指块过长且顶部不自然"
+          },
+          {
+            "seed": 2026110505,
+            "note": "相对基线有更多指段，重复折指块和拇指连接异常"
+          },
+          {
+            "seed": 2026110506,
+            "note": "指块过厚，掌缘与袖口断层"
+          },
+          {
+            "seed": 2026110507,
+            "note": "从侧面拳转正面，但拳头过大、腕部拼接异常"
+          },
+          {
+            "seed": 2026110508,
+            "note": "折指更清楚但掌面黑点和连接仍异常"
+          },
+          {
+            "seed": 2026110509,
+            "note": "膨大的拳形和明显腕部拼接，未接近Good"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true,
+        "checkpoint": 512
+      },
+      {
+        "split": "train8",
+        "group": 0,
+        "checkpoint": 512,
+        "note": "倒茶：补回局部漏手，但手腕与器皿接触仍错，不能当完整修复。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "壶上方补出更多指段，但手指与手臂连接不完整"
+          },
+          {
+            "seed": 2026110501,
+            "note": "补回基线消失的上方手，仍不连贯，壶/托举姿态明显变化"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "split": "train8",
+        "group": 1,
+        "checkpoint": 512,
+        "note": "拿蛋糕：手指稍明确，手指贴到蛋糕的方式仍不自然，腕部拼接仍在。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "近似基线，指尖/蛋糕相交和手腕边界异常"
+          },
+          {
+            "seed": 2026110501,
+            "note": "细长指形变清楚，但出现过密掌纹和接触错误"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "split": "train8",
+        "group": 2,
+        "checkpoint": 512,
+        "note": "炒菜：手指排列更明确，腕部仍有矩形硬拼接，握持姿态没有贴近Good。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "折指伸长更清楚，但腕部几何硬边与暗手掌明显"
+          },
+          {
+            "seed": 2026110501,
+            "note": "与基线近似，指块变长、腕部边界仍明显"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "split": "train8",
+        "group": 3,
+        "checkpoint": 512,
+        "note": "托腮：下方手部轮廓有变化，上方手未体现清楚的新结构优势；不能把高于Good的分数当正确性。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "上方拳形与基线近似，下方手指更明确，接触/遮挡仍有歧义"
+          },
+          {
+            "seed": 2026110501,
+            "note": "下方手指更清楚，上方鼻口附近手势改变，仍需区分姿态与结构"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "split": "train8",
+        "group": 4,
+        "checkpoint": 512,
+        "note": "沙发前举指：单指更完整，但仍有指根/腕部问题。prompt为holding up a finger，Good为V字，不把姿态不同直接视作结构失败。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "上举指和折指较完整，腕部过粗与连接仍异常"
+          },
+          {
+            "seed": 2026110501,
+            "note": "由较短指变成长指，折指更明确，仍有粗大指块"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "split": "train8",
+        "group": 5,
+        "checkpoint": 512,
+        "note": "红墙举指：比基线瘦弱破碎的手明显完整，但偏白肤色与腕部细长不自然仍在。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "指掌轮廓比基线完整，前臂筋纹过强、腕部过细"
+          },
+          {
+            "seed": 2026110501,
+            "note": "较基线长条折指更接近闭合手掌，仍未接近Good肤色/腕部"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "split": "train8",
+        "group": 6,
+        "checkpoint": 512,
+        "note": "超市双拳：部分种子补回消失手，拳形更明显；过大指块、指掌连接和肤色偏亮仍有问题。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "双拳更大更清楚，右拳指块重复/掌缘仍不自然"
+          },
+          {
+            "seed": 2026110501,
+            "note": "补回基线消失的左手，右拳更完整；仍有拳掌连接疑问"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "split": "train8",
+        "group": 7,
+        "checkpoint": 512,
+        "note": "车内举掌：手掌较完整但腕部拉长，袖口及横贯手指的亮色边界仍明显。",
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "掌心更完整，腕部明显拉长、硬切边仍在"
+          },
+          {
+            "seed": 2026110501,
+            "note": "手掌形状接近基线，前臂变长且有亮线横切指段"
+          }
+        ],
+        "full_and_all_context_crops_viewed": true
+      }
+    ],
+    "human_success_rate": null,
+    "complete": true,
+    "intermediate256": [
+      {
+        "split": "dev8",
+        "group": 0,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "近似基线，拳头变亮，无明显结构收益"
+          },
+          {
+            "seed": 2026110501,
+            "note": "指块明显拉长变大，拳形与拇指关系不自然"
+          }
+        ]
+      },
+      {
+        "split": "dev8",
+        "group": 1,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "两侧拇指/头发硬边与重复指段仍在"
+          },
+          {
+            "seed": 2026110501,
+            "note": "补回右拇指，右手腕部连接仍错位，左拇指仍受边界截断"
+          }
+        ]
+      },
+      {
+        "split": "dev8",
+        "group": 2,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "与基线接近，拇指形状变化，无明确结构收益"
+          },
+          {
+            "seed": 2026110501,
+            "note": "上方残影减轻，折指更完整；仍有过长掌纹"
+          }
+        ]
+      },
+      {
+        "split": "dev8",
+        "group": 3,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "托举手指更清楚，接触/肤色仍不协调"
+          },
+          {
+            "seed": 2026110501,
+            "note": "左手出现类似多叉指尖，右手连接仍异常"
+          }
+        ]
+      },
+      {
+        "split": "dev8",
+        "group": 4,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "极细第二指变完整，但折指连接不自然"
+          },
+          {
+            "seed": 2026110501,
+            "note": "仍为单指，较基线略清楚，无明确整体优势"
+          }
+        ]
+      },
+      {
+        "split": "dev8",
+        "group": 5,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "折指更完整，腕部/袖口改变仍明显"
+          },
+          {
+            "seed": 2026110501,
+            "note": "指根结块减少，食指仍细长不自然"
+          }
+        ]
+      },
+      {
+        "split": "dev8",
+        "group": 6,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "手变大变亮，近似基线，拇指不自然"
+          },
+          {
+            "seed": 2026110501,
+            "note": "折指变化、掌心变大，不足证明结构收益"
+          }
+        ]
+      },
+      {
+        "split": "dev8",
+        "group": 7,
+        "checkpoint": 256,
+        "full_and_all_context_crops_viewed": true,
+        "seed_notes": [
+          {
+            "seed": 2026110500,
+            "note": "拳头略清楚但掌缘过大，背景浅色补丁仍在"
+          },
+          {
+            "seed": 2026110501,
+            "note": "拳头变大、掌缘与袖口仍错接"
+          }
+        ]
+      }
+    ],
+    "intermediate128": [
+      {
+        "group": 0,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "0/1种子与原模型非常接近，尺寸和姿态仍偏离Good；没有清楚的新结构收益。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "group": 1,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "两只拇指在0/1种子均保持原模型的截断/硬边，右侧手掌堆叠感仍强；没有清楚改进。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "group": 2,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "0种子近似原模型；1种子减少了原模型上方明显的残影，手掌也改变，但只有单个候选，不能推为整体收益。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "group": 3,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "双手由握持变为托举，0种子接触安排变化，1种子近似原模型；仍有不自然指形和光照，不认定稳定结构优势。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "group": 4,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "0种子新增/延长极细竖指，结构仍异常；1种子近似原模型。提示词peace sign与Good单指姿态有歧义。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "group": 5,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "0/1种子折叠指细节变化，但细长竖指与边界/连接异常仍存在，袖口/手臂在Mask内明显改变。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "group": 6,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "0/1种子均与原模型接近，仍有肥厚/紧凑的指掌连接；未看到清楚结构优势。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      },
+      {
+        "group": 7,
+        "seeds": [
+          2026110500,
+          2026110501
+        ],
+        "note": "0/1种子拳头与原模型接近；袖口旁仍有明显浅色重绘边界，不算解决。",
+        "split": "dev8",
+        "checkpoint": 128,
+        "full_and_all_context_crops_viewed": true
+      }
+    ],
+    "conclusion": "固定512步小试验有局部结构改善，也有严重退化；尚未获得稳定手部修复。冻结评分器可辅助排序，但已发现将手区人脸错画排到组内第一，不能自动接受最高分或据分数伪造Good。未扩大训练。",
+    "score_failure": {
+      "split": "dev8",
+      "group": 3,
+      "seed": 2026110509,
+      "score": 42.316779002133224,
+      "rank_within_lora_group": 1,
+      "threshold": 43.2217,
+      "predicted_label": "bad",
+      "visual_failure": "手区出现人脸及另一身体片段",
+      "interpretation": "排序错误；不是越过好手阈值的假阳性，也不是训练奖励攻击，因为评分器没有用于梯度或选训练样本。"
+    },
+    "review_scope": {
+      "dev128": 16,
+      "dev256": 16,
+      "dev512": 80,
+      "train512": 16,
+      "all_candidates_in_declared_review_scope": true,
+      "original_and_good_and_same_seed_baseline_also_viewed": true,
+      "board_count": 88,
+      "precision": "128初筛使用早期JPG板；其余使用本地WebP预览整图384/手部上下文512，不能据此评价原PNG细微纹理。完整PNG/raw保留远端。",
+      "independent_human_review_done": false,
+      "human_success_rate": null
+    },
+    "finished_utc": "2026-11-05T09:42:42.737349+00:00"
+  }
+}

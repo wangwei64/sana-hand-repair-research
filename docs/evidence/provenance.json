@@ -1,0 +1,64 @@
+{
+  "title": "历史测试与确认集的来源更正",
+  "source": "hand-direction-search-20261101/output/phase2/data_provenance_summary_20261104.json",
+  "source_sha256": "81b1ceef55a21d9e5e45a1997dfd0542d17d6bd089e4a0189faae76ededde0cc",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "checked_at": "2026-11-04T01:06:34.152950+00:00",
+    "original_sana_images": 10000,
+    "packaged_pairs": 4454,
+    "packaged_methods": {
+      "qwen": 3947,
+      "realishuman": 507
+    },
+    "packaged_prompt_groups": 943,
+    "primary_selection_pairs": 4449,
+    "splits": {
+      "train": {
+        "pairs": 3594,
+        "groups": 763
+      },
+      "validation": {
+        "pairs": 469,
+        "groups": 95
+      },
+      "test": {
+        "pairs": 386,
+        "groups": 85
+      }
+    },
+    "original_exclusions": [
+      {
+        "sample_id": "hf-17060ba62c25b536_seed2026102202",
+        "role": "pose_change_sensitivity_only",
+        "split": "train"
+      },
+      {
+        "sample_id": "np-5133e259e9d4cde4_seed2026102206",
+        "role": "pose_change_sensitivity_only",
+        "split": "train"
+      },
+      {
+        "sample_id": "np-335f276275ad4e5c_seed2026102203",
+        "role": "existing_quarantine",
+        "split": null
+      },
+      {
+        "sample_id": "np-5a24c451bbc567a3_seed2026102202",
+        "role": "existing_quarantine",
+        "split": null
+      },
+      {
+        "sample_id": "np-e9f2039a5413422e_seed2026102201",
+        "role": "pose_change_sensitivity_only",
+        "split": "train"
+      }
+    ],
+    "earlier_test_record": "Legacy test already inspected, not a fresh blind test",
+    "source_hashes": {
+      "[server-path]": "c351165404c5610205478d836de4128a47c1988681b89cc4e42138c4df82cc48"
+    },
+    "confirmation_correction": "Earlier protocol explicitly states legacy test already inspected, not a fresh blind test. Current research excludes legacy test fromtraining but must not claim85groups neverseen. All95validationgroups were evaluated by earlypairedreward;23unusedvisualgroups are not automatically pristineconfirmation. A defensible independentconfirmation cohort remains to be established without changing originaldata/splits.",
+    "scope": "Metadata-only reconciliation; no sourceimages, confirmationimages or modelweights read/modified. Existing5exclusions predate current research, no newfiltering."
+  }
+}

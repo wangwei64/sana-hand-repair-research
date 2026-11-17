@@ -1,0 +1,46 @@
+{
+  "title": "Good 加噪还原诊断",
+  "source": "sana-good-noise8-20261105/SUMMARY.json",
+  "source_sha256": "d56e800ca505730e042fb73c64721eff4dc5c676fc66f680d992bb8589f7fc37",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "timestamp": "2026-11-05T02:10:09.096523+00:00",
+    "bounded_inference_complete": true,
+    "samples": 24,
+    "vae_baselines": 8,
+    "total_outputs": 32,
+    "metrics_not_success_rates": [
+      {
+        "level": 0,
+        "group_mean_mask_mae255": 3.958252806959898,
+        "group_mean_mask_psnr_db": 32.37730209811242,
+        "mean_hot_sample_decode_composite_seconds": 0.1460590776114259
+      },
+      {
+        "level": 0.25,
+        "group_mean_mask_mae255": 8.325236412655565,
+        "group_mean_mask_psnr_db": 26.038036637777793,
+        "mean_hot_sample_decode_composite_seconds": 1.1471403053874383
+      },
+      {
+        "level": 0.5,
+        "group_mean_mask_mae255": 14.58516673619386,
+        "group_mean_mask_psnr_db": 21.355809453364742,
+        "mean_hot_sample_decode_composite_seconds": 1.1172428288846277
+      },
+      {
+        "level": 0.75,
+        "group_mean_mask_mae255": 26.265558365096904,
+        "group_mean_mask_psnr_db": 16.4483354563848,
+        "mean_hot_sample_decode_composite_seconds": 1.1262442831357475
+      }
+    ],
+    "finding": "原模型对这些 Good 的低噪声自还原具有一定结构保持能力；随着噪声上升，部分样本出现姿态/接触关系改变与结构退化。",
+    "interpretation": "正确结构作为初始信息时能够在一定程度上保留；本次不能证明原模型能从 Bad 走到该正确结构，也不能证明有可泛化的修复引导。",
+    "next_proposed_not_run": "在同一部分加噪流程、同一seed与实际时间网格下，对 Bad/Good 做配对还原，区分保留输入结构和主动纠正结构。取得这一步证据后再设计 Good 监督如何引导 Bad。",
+    "old_training": "remains stopped; automation PAUSED",
+    "additional_experiments_started": false,
+    "official_source": "https://github.com/NVlabs/Sana/pull/296",
+    "review": "visual_review.json"
+  }
+}

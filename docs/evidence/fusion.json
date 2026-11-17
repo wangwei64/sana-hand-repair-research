@@ -1,0 +1,37 @@
+{
+  "title": "骨架、图像与伪影融合试验",
+  "source": "hand-reward-fused-20261105/SUMMARY.json",
+  "source_sha256": "e5216d41eb38a1e650d3c518d514e96e030db8b62d4a9d374596e3b1cca69167",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "adoption_decision": "experimental_only_not_adopted_as_generator_reward",
+    "human_preference_rgb": {
+      "image_only": 0.8546712802768166,
+      "image_defect": 0.8581314878892734,
+      "full": 0.8200692041522492
+    },
+    "source_equal_macro": {
+      "image_only": 0.6775372916057327,
+      "image_defect": 0.6794384322901433,
+      "full": 0.6585258847616262
+    },
+    "blur_increases_out_of8": {
+      "image_only": 3,
+      "image_defect": 3,
+      "full": 2
+    },
+    "rgb_gray_top1_changes_out_of8": {
+      "image_only": 3,
+      "image_defect": 6,
+      "full": 7
+    },
+    "skeleton_detection_any_rgb": 0.9076703478326197,
+    "skeleton_detection_any_gray_jpeg85": 0.5171662534745699,
+    "generator_updates": 0,
+    "anatomy_success_rate": null,
+    "independent_human_review": false,
+    "protected_test_read": false,
+    "candidates_scored": 80,
+    "offline_references_and_stress": 24
+  }
+}

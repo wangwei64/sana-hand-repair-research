@@ -1,0 +1,65 @@
+{
+  "title": "SFT 开跑前固定协议（不是当前运行状态）",
+  "source": "sana-lora-inpaint-sft-20261105/EXPERIMENT.json",
+  "source_sha256": "a5b09ee1b34c9e9bd6cd774034c554fcaaaa5e5b76684b669f1eb80f6b5a6af1",
+  "publication_note": "Curated and path-redacted snapshot. Source hash refers to the original local artifact.",
+  "content": {
+    "name": "Good-supervised LoRA plus official masked Sana inpainting, with frozen scorer auxiliary ranking",
+    "status": "prepared_not_started",
+    "authorization": "User: 做我们之前说的lora下的inpainting优化，使用这个模型辅助判别",
+    "model": "[server-path]",
+    "model_sha256": "712b69e1e14ac7ece99e35b257927c4e0cf8ba2c24eb49574301ff0b10069298",
+    "vae_sha256": "15a4b09e56d95b768a0ec9da50b702e21d920333fc9b3480d66bb5c7fad9d87f",
+    "scorer_sha256": "aca7402432c4086a2aa907e94ba132079f2813de71fd2e516e66066e8c980a47",
+    "train_pairs": 64,
+    "dev_pairs": 8,
+    "rank": 8,
+    "alpha": 8,
+    "targets": [
+      "to_q",
+      "to_k",
+      "to_v",
+      "to_out.0"
+    ],
+    "lr": 0.0001,
+    "seed": 2026110517,
+    "updates": 512,
+    "accumulation": 4,
+    "checkpoints": [
+      128,
+      256,
+      512
+    ],
+    "background_weight": 0.05,
+    "condition_dropout": 0.1,
+    "training": "Native continuous flow: z_t=(1-t)*encode(Good)+t*epsilon, target=epsilon-encode(Good), t uniform[.001,1]. Original unchanged prompt; mask-area-normalized MSE plus .05 background MSE. Only LoRA gradients. No scorer loss/weighting/pseudo labels.",
+    "mask": "Original uint8 mask bilinear to32x32 then>.5 exactly as earlier official inpainting; pixel mask original>0, no dilation or feathering.",
+    "inference": "Verbatim official sample_mask:20 forward steps+19 inversion, CFG4.5 flow_shift3; LoRA enabled for BOTH inverse and forward, one Sana. Fresh seeded noise; no Good input. Original-mask hard pixel composite and raw PNG both retained.",
+    "evaluation": {
+      "seeds": [
+        2026110500,
+        2026110501,
+        2026110502,
+        2026110503,
+        2026110504,
+        2026110505,
+        2026110506,
+        2026110507,
+        2026110508,
+        2026110509
+      ],
+      "intermediate": "128/256:all8dev first2fixedseeds; no checkpoint selection",
+      "final": "512:all8dev10seeds and first8train2seeds; original baseline same seeds, prompts, masks. All outputs frozen before scorer ranking.",
+      "baseline": "Reuse prior80 official originals only after3 exact actual PNG replay probes; otherwise fail, do not relax.",
+      "scorer": "Frozen unified scorer; score all candidates and report same-seed changes and per-grouptop1. High score is not anatomy success. Display all seeds, no hidden failures."
+    },
+    "differences_from_old": "Old fm128 used halo1 maxpool mask, hybrid latent target, partial sigma.6 sampling. Here Good latent is not pasted twice; original official mask, full-noise official inverse+inpaint evaluation,512 updates. Recipe changes are bundled; cannot attribute any gain to one factor. Prior endpoint/bridge/210 and mask-channel designs remain stopped.",
+    "limits": "Strengthens Good generation prior; does not directly learn a Bad-to-Good conditional editor. No proof of transfer or success. Existing dev8 repeatedly viewed, not blind. confirm32 untouched.",
+    "stop": "512 attempted updates hard cap. Fail on nonfinite values or any skipped optimizer update, parity/hash failure; no automatic expansion. Human success rate remains null.",
+    "data_sha256": {
+      "train64.jsonl": "dfff721e9c929543e4c71887fb19a55789814b5d4d2efcdd263e6cfd7ac6c580",
+      "dev8.jsonl": "1335bb6d602ccc3dd8ab651b057f862d443932bdfc04f6e22fbaf1c96c207a08",
+      "scorer_dev_boxes.json": "41a365680c580f7cac0235395d320cfd20f07eae4051b4fb3089cd3346cee070"
+    }
+  }
+}
